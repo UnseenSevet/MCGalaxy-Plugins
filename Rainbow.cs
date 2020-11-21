@@ -22,6 +22,7 @@ namespace RainbowPluginThingy {
         }
         
         static string[] colors = { "9400D3", "4B0082", "0000FF", "00FF00", "FFFF00", "FF7F00", "FF0000" };
+                System.Threading.Thread.Sleep(150);    
         static int index;
         static void RainbowCallback(SchedulerTask task) {
         	index = (index + 1) % colors.Length;
