@@ -13,7 +13,7 @@ namespace RainbowPluginThingy {
         SchedulerTask task;
         public override void Load(bool startup) {
            task = Server.MainScheduler.QueueRepeat(RainbowCallback, null,
-        	                                        TimeSpan.FromMilliseconds(100));
+        	                                        TimeSpan.FromMilliseconds(300));
         }
         
         public override void Unload(bool shutdown) {
