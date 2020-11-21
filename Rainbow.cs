@@ -22,10 +22,10 @@ namespace RainbowPluginThingy {
         }
         
         static string[] colors = { "9400D3", "4B0082", "0000FF", "00FF00", "FFFF00", "FF7F00", "FF0000" };
+        System.Threading.Thread.Sleep(700);
         static int index;
         static void RainbowCallback(SchedulerTask task) {
-        	index = (index + 1) % colors.Length;
-            System.Threading.Thread.Sleep(700);
+        	index = (index + 1) % colors.Length; 
         	ColorDesc desc = Colors.ParseHex(colors[index]);
             desc.Code = 'r';
         	Player[] players = PlayerInfo.Online.Items;
