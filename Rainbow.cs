@@ -25,7 +25,7 @@ namespace RainbowPluginThingy {
         static int index;
         static void RainbowCallback(SchedulerTask task) {
         	index = (index + 1) % colors.Length;
-        	Thread.Sleep(700);
+            System.Threading.Thread.Sleep(700);
         	ColorDesc desc = Colors.ParseHex(colors[index]);
             desc.Code = 'r';
         	Player[] players = PlayerInfo.Online.Items;
